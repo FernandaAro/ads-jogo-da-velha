@@ -1,0 +1,5 @@
+C:\Users\ferna\Documents\dev\graduation-jogo-da-velha\vscode\obj\Debug\net6.0\vscode.csproj.AssemblyReference.cache
+C:\Users\ferna\Documents\dev\graduation-jogo-da-velha\vscode\obj\Debug\net6.0\vscode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ferna\Documents\dev\graduation-jogo-da-velha\vscode\obj\Debug\net6.0\vscode.AssemblyInfoInputs.cache
+C:\Users\ferna\Documents\dev\graduation-jogo-da-velha\vscode\obj\Debug\net6.0\vscode.AssemblyInfo.cs
+C:\Users\ferna\Documents\dev\graduation-jogo-da-velha\vscode\obj\Debug\net6.0\vscode.csproj.CoreCompileInputs.cache
