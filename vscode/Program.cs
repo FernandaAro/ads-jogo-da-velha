@@ -61,6 +61,90 @@ namespace jogoDaVelha
                 Console.Write(Environment.NewLine);
             }
         }
+        static bool conferirJogada(char[,] tabuleiro, int linha, int coluna, int jogador, int jogada)
+        {
+            bool trinca = false;
+
+            if (jogador == 1)
+                tabuleiro[linha, coluna] = 'X';
+            else
+                tabuleiro[linha, coluna] = 'O';
+
+            //verificar linha
+            for (int c = 0; c < 3; c++)
+            {
+                if (tabuleiro[linha, c] != tabuleiro[linha, coluna])
+                    break;
+                if (c == 2)
+                    trinca = true;
+            }
+
+            //verificar coluna
+            if (!trinca)
+            {
+                if (linha == coluna)
+                {
+                    for (int cont = 0; cont < 3; cont++)
+                    {
+                        if (tabuleiro[cont, cont] != tabuleiro[linha, coluna])
+                            break;
+                        if (cont == 2)
+                            trinca = true;
+                    }
+                }
+            }
+
+            //verificar diagonal 1
+            if (!trinca)
+            {
+                if (linha == coluna)
+                {
+                    for (int cont = 0; cont < 3; cont++)
+                    {
+                        if (tabuleiro[cont, cont] != tabuleiro[linha, coluna])
+                            break;
+                        if (cont == 2)
+                            trinca = true;
+                    }
+                }
+            }
+
+            //verificar diagonal 2
+            if (!trinca)
+            {
+                if (linha + coluna == 3 - 1)
+                {
+                    for (int cont = 0; cont < 3; cont++)
+                    {
+                        if (tabuleiro[cont, 3 - cont - 1] != tabuleiro[linha, coluna])
+                            break;
+                        if (cont == 2)
+                            trinca = true;
+                    }
+                }
+            }
+
+            if (trinca)
+            {
+                Console.WriteLine();
+                imprimirTabuleiro(tabuleiro);
+                Console.Write("Jogador " + jogador + " venceu!!! \n\n");
+                return true;
+            }
+
+            if (jogada == 9)
+            {
+                Console.WriteLine();
+                imprimirTabuleiro(tabuleiro);
+                Console.Write("Empate! \n\n");
+                return true;
+            }
+
+            else
+            {
+                Console.Write("\n Próximao jogador... \n\n");
+                return false;
+            }
+        }
     }
-}
 }
