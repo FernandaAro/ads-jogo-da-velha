@@ -45,5 +45,22 @@ namespace jogoDaVelha
                     jogador = 1;
             } while (!fimJogo);
         }
+        static void imprimirTabuleiro(char[,] tabuleiro)
+        {
+            for (int l = 0; l < 3; l++)
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    Console.Write(string.Format("{0}", tabuleiro[l, c]));
+                    if (c < 2)
+                        Console.Write("|");
+                }
+                Console.Write(Environment.NewLine);
+                if (l < 2)
+                    Console.Write("-----");
+                Console.Write(Environment.NewLine);
+            }
+        }
     }
+}
 }
